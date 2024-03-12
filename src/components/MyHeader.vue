@@ -2,7 +2,7 @@
     <q-header class="bg-teal text-white" style="height: 70px">
         <q-toolbar class="fit">
             <q-toolbar-title>
-                Quasar App
+                {{ title }}
             </q-toolbar-title>
             <q-space ></q-space>
             <q-icon name="account_circle" size="md"/>
@@ -11,7 +11,12 @@
 </template>
 
 <script setup>
-
+const props = defineProps({
+    title: {
+        type: String,
+        require: true
+    }
+})
 </script>
 
 <style scoped>
