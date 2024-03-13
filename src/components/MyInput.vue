@@ -24,6 +24,15 @@
         v-model="text"
         label="Label" 
     />
+    <q-input v-else-if="type=='textarea'"
+        color="deep-purple" 
+        label-color="deep-purple" 
+        rounded
+        outlined 
+        v-model="text"
+        label="Label" 
+        type="textarea"
+    />
     <q-input v-else
         color="deep-purple" 
         label-color="deep-purple" 
@@ -39,7 +48,7 @@ import { ref } from 'vue'
 const props = defineProps({
     type: {
         type: String,
-        require: true
+        require: false
     }
 })
 const text = ref('')
@@ -52,12 +61,18 @@ const text = ref('')
     border-radius: 50px;
 }
 
+.q-field.row.no-wrap.items-start.q-field--outlined.q-textarea.q-field--rounded.q-field--labeled ::before {
+    border: 1px solid teal;
+    border-radius: 30px;
+}
+
 .q-field.row.no-wrap.items-start.q-field--outlined.q-input.q-field--rounded.q-field--float.q-field--labeled ::before {
-    border: 0.1px solid teal;
+    border: 0px solid teal;
     border-radius: 50px;
 }
 
 .q-field.row.no-wrap.items-start.q-field--standard.q-input.q-field--labeled ::before {
     border-bottom: 1px solid #673ab7;
 }
+
 </style>

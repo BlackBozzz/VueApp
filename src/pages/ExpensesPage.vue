@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MyHeader title="Расходы"></MyHeader>
+        <MyHeader :title="'Расходы'"></MyHeader>
         <MyFooter></MyFooter>
     </div>
 </template>

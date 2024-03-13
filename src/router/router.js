@@ -4,11 +4,29 @@ import RegisterPage from '@/pages/RegisterPage.vue'
 import MainPage from '@/pages/MainPage.vue'
 import UserPage from '@/pages/UserPage.vue'
 import ExpensesPage from '@/pages/ExpensesPage.vue'
+import ComponentsExample from '@/example/ComponentsExample.vue'
+import CardsExample from '@/example/CardsExample.vue'
+import ItemsExample from '@/example/ItemsExample.vue'
 
 
 const routes = [
   {
-    path: '/',
+    path: '/ComponentsExample',
+    name: 'ComponentsExample',
+    component: ComponentsExample
+  },
+  {
+    path: '/CardsExample',
+    name: 'CardsExample',
+    component: CardsExample
+  },
+  {
+    path: '/ItemsExample',
+    name: 'ItemsExample',
+    component: ItemsExample
+  },
+  {
+    path: '/login',
     name: 'login',
     component: LoginPage
   },

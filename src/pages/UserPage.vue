@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MyHeader title="Профиль"></MyHeader>
+        <MyHeader :title="'Профиль'"></MyHeader>
         <MyFooter></MyFooter>
     </div>
 </template>
