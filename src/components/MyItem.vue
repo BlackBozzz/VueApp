@@ -12,7 +12,7 @@
         </q-item-section>
 
         <q-item-section side>
-            <MyButton :type="'arrow'"></MyButton> 
+            <q-icon name="arrow_right" color="grey-10"></q-icon>
         </q-item-section>   
     </q-item>
     
@@ -34,7 +34,7 @@
         </q-item-section>
         
         <q-item-section side>
-            <MyButton :type="'arrow'"></MyButton>  
+            <q-icon name="arrow_right" color="grey-10"></q-icon>
         </q-item-section>
     </q-item>
 </template>
@@ -42,7 +42,6 @@
 <script setup>
 import { ref } from 'vue'
 import MyToggle from './MyToggle.vue';
-import MyButton from '@/components/MyButton.vue';
 const props = defineProps({
     type: {
         type: String,

@@ -8,7 +8,7 @@
         @click="btnClick"
     />
     <q-btn v-else-if="type=='edit'"
-        rounded
+        style="border-radius: 16px;"
         unelevated
         color="deep-purple-1"
         text-color="deep-purple-10"
