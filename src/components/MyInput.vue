@@ -5,8 +5,9 @@
         rounded
         outlined 
         v-model="text"
-        label="Label" 
-        placeholder="Placeholder"
+        :label="label" 
+        :placeholder="placeholder"
+        @update:model-value="changeValue"
     />
     <q-input v-else-if="type=='filled'"
         color="deep-purple" 
@@ -16,13 +17,15 @@
         outlined 
         v-model="text"
         stack-label
-        label="Label" 
+        :label="label" 
+        @update:model-value="changeValue"
     />
     <q-input v-else-if="type=='borderless'"
         color="deep-purple" 
         label-color="deep-purple" 
         v-model="text"
-        label="Label" 
+        :label="label" 
+        @update:model-value="changeValue"
     />
     <q-input v-else-if="type=='textarea'"
         color="deep-purple" 
@@ -30,8 +33,9 @@
         rounded
         outlined 
         v-model="text"
-        label="Label" 
+        :label="label" 
         type="textarea"
+        @update:model-value="changeValue"
     />
     <q-input v-else
         color="deep-purple" 
@@ -39,24 +43,40 @@
         rounded
         outlined 
         v-model="text"
-        label="Label" 
+        :label="label" 
+        @update:model-value="changeValue"
     />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+
 const props = defineProps({
     type: {
         type: String,
         require: false
+    },
+    label: {
+        type: String,
+        require: false
+    },
+    placeholder: {
+        type: String,
+        require: false
     }
 })
+
 const text = ref('')
 
+const emit = defineEmits(['changeValue'])
+
+const changeValue = () => {
+    emit('changeValue', text.value)
+}
 </script>
 
 <style scoped>
-.q-field.row.no-wrap.items-start.q-field--outlined.q-input.q-field--rounded.q-field--labeled ::before {
+.q-field.row.no-wrap.items-start.q-field--outlined.q-input.q-field--rounded.q-field--labeled {
     border: 1px solid teal;
     border-radius: 50px;
 }

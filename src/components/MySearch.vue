@@ -5,6 +5,7 @@
         rounded
         bg-color="teal-1"
         color="deep-purple"
+        placeholder="Поиск"
         type="search"
     >
         <template v-slot:append>

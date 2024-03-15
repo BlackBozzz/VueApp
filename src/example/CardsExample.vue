@@ -3,6 +3,7 @@
         <q-page-container class="my">
             <MyCard :with-info="true"></MyCard>
             <MyCard></MyCard>
+            <MyCarousel></MyCarousel>
         </q-page-container>
     </q-layout>
         
@@ -10,6 +11,8 @@
 
 <script setup>
 import MyCard from '@/components/MyCard.vue';
+import MyCarousel from '@/components/MyCarousel.vue';
+
 
 
 </script>

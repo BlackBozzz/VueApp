@@ -5,6 +5,7 @@
         color="teal-5"
         text-color="white"
         icon="close"
+        @click="btnClick"
     />
     <q-btn v-else-if="type=='edit'"
         rounded
@@ -12,6 +13,15 @@
         color="deep-purple-1"
         text-color="deep-purple-10"
         icon="edit"
+        @click="btnClick"
+    />
+    <q-btn v-else-if="type=='arrow'"
+        color="grey-10"
+        round
+        flat
+        dense
+        icon="arrow_right"
+        @click="btnClick"
     />
     <q-btn v-else-if="type=='create'"
         no-caps 
@@ -21,6 +31,7 @@
         text-color="deep-purple"
         icon="add"
         :label="label" 
+        @click="btnClick"
     />
     <q-btn v-else-if="type=='cancel'"
         no-caps 
@@ -30,6 +41,7 @@
         color="white"
         text-color="deep-purple"
         :label="label" 
+        @click="btnClick"
     />
     <q-btn v-else
         no-caps 
@@ -38,10 +50,17 @@
         color="teal"
         :label="label" 
         :icon="iconName"
+        @click="btnClick"
     />
 </template>
 
 <script setup>
+const emit = defineEmits(['btnClick'])
+
+const btnClick = () => {
+    emit('btnClick')
+}
+
 const props = defineProps({
     type: {
         type: String,

@@ -7,24 +7,18 @@
         </q-item-section>
 
         <q-item-section>
-            <q-item-label>title</q-item-label>
+            <q-item-label class="text-deep-purple">title</q-item-label>
             <q-item-label caption>text</q-item-label>
         </q-item-section>
 
         <q-item-section side>
-            <q-btn 
-                color="grey-10"
-                round
-                flat
-                dense
-                icon="arrow_right"
-            /> 
+            <MyButton :type="'arrow'"></MyButton> 
         </q-item-section>   
     </q-item>
     
     <q-item v-else-if="type=='withToggle'" tag="label" v-ripple class="item">
         <q-item-section>
-            <q-item-label>title</q-item-label>
+            <q-item-label class="text-deep-purple">title</q-item-label>
             <q-item-label caption>limit</q-item-label>
         </q-item-section>
 
@@ -35,18 +29,12 @@
 
     <q-item v-else clickable v-ripple class="item">
         <q-item-section>
-            <q-item-label>title</q-item-label>
+            <q-item-label class="text-deep-purple">title</q-item-label>
             <q-item-label caption>date and cost</q-item-label>
         </q-item-section>
         
         <q-item-section side>
-            <q-btn 
-                color="grey-10"
-                round
-                flat
-                dense
-                icon="arrow_right"
-            /> 
+            <MyButton :type="'arrow'"></MyButton>  
         </q-item-section>
     </q-item>
 </template>
@@ -54,6 +42,7 @@
 <script setup>
 import { ref } from 'vue'
 import MyToggle from './MyToggle.vue';
+import MyButton from '@/components/MyButton.vue';
 const props = defineProps({
     type: {
         type: String,

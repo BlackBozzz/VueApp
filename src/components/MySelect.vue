@@ -1,27 +1,40 @@
 <template>
     <q-select 
-        clearable 
+        class="my-select"
         rounded
         outlined 
         color="deep-purple" 
-        label-color="deep=purple"
+        label-color="deep-purple"
         v-model="model" 
         :options="options" 
-        label="Label" 
+        :label="label" 
         transition-show="jump-up"
         transition-hide="jump-up"
+        @update:model-value="changeValue"
     />
 </template>
 
 <script setup>
 import { ref } from 'vue'
+
 const props = defineProps({
     options: {
         type: Array,
         require: true
+    },
+    label: {
+        type: String,
+        require: true
     }
 })
+
 const model = ref(null)
+
+const emit = defineEmits(['changeValue'])
+
+const changeValue = () => {
+    emit('changeValue', model.value)
+}
 </script>
 
 <style scoped>
@@ -29,4 +42,5 @@ const model = ref(null)
     border: 1px solid teal;
     border-radius: 50px;
 }
+
 </style>

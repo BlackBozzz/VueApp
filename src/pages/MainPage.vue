@@ -1,8 +1,15 @@
 <template>
   <q-layout>
     <MyHeader :title="'Главная'"></MyHeader>
-    <q-page-container class="flex flex-center">
-      <img alt="Quasar logo" src="../assets/logo.svg" style="width: 200px; height: 200px">
+    <q-page-container class="q-mx-sm">
+      <div class="text-h5 text-bold text-deep-purple-10 q-ma-md">Курс валют</div>
+      <div class="content">
+        <MyInput class="input" :label="'Сумма'" @change-value="inputUpdate"></MyInput>
+        <MySelect class="select" :options="options" :label="'Валюта'" @change-value="selectUpdate"></MySelect>
+        <MyInput class="input" :label="'Сумма'" @change-value="inputUpdate"></MyInput>
+        <MySelect class="select" :options="options" :label="'Валюта'" @change-value="selectUpdate"></MySelect>
+      </div>
+      <MyCard class="q-mt-md" :with-info="true"></MyCard>
     </q-page-container>
     <MyFooter></MyFooter>
   </q-layout>
@@ -11,9 +18,37 @@
 <script setup>
 import MyHeader from '@/components/MyHeader.vue'
 import MyFooter from '@/components/MyFooter.vue'
+import MyCard from '@/components/MyCard.vue';
+import MyInput from '@/components/MyInput.vue';
+import MySelect from '@/components/MySelect.vue';
 
+const options = [
+  'Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'
+]
+
+const inputUpdate = (value) => {
+    console.log(value)
+}
+
+const selectUpdate = (value) => {
+    console.log(value)
+}
 </script>
 
 <style>
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 5px;
 
+  margin-bottom: 25px;
+}
+.select {
+  min-width: 120px;
+}
+.input {
+  width: calc(100% - 130px);
+}
 </style>
