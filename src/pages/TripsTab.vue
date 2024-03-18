@@ -11,8 +11,6 @@
 </template>
 
 <script setup>
-import MyHeader from '@/components/MyHeader.vue'
-import MyFooter from '@/components/MyFooter.vue'
 import MySearch from '@/components/MySearch.vue';
 import MyButton from '@/components/MyButton.vue';
 import MyCard from '@/components/MyCard.vue';

@@ -49,6 +49,8 @@ const inputUpdate = (value) => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 25px;
+  
 
     width: 80%;
 }

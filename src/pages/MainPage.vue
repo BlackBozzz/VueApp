@@ -35,7 +35,7 @@ const selectUpdate = (value) => {
 }
 </script>
 
-<style>
+<style scoped>
 .content {
   display: flex;
   flex-direction: row;

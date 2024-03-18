@@ -1,9 +1,17 @@
 <template>
-    <q-btn v-if="type=='close'"
+    <q-btn v-if="type=='close-bg'"
         round
         unelevated
         color="teal-5"
         text-color="white"
+        icon="close"
+        @click="btnClick"
+    />
+    <q-btn v-else-if="type=='close'"
+        flat 
+        round
+        dense 
+        v-close-popup
         icon="close"
         @click="btnClick"
     />
@@ -34,12 +42,22 @@
         @click="btnClick"
     />
     <q-btn v-else-if="type=='cancel'"
+        v-close-popup 
         no-caps 
         rounded 
         unelevated
         outline
         color="white"
         text-color="deep-purple"
+        :label="label" 
+        @click="btnClick"
+    />
+    <q-btn v-else-if="type=='save'"
+        v-close-popup 
+        no-caps 
+        rounded 
+        unelevated
+        color="teal"
         :label="label" 
         @click="btnClick"
     />

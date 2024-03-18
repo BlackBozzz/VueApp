@@ -10,7 +10,7 @@
             <div>
                 <MyButton :type="'create'" :label="'create'"></MyButton>
                 <MyButton :type="'edit'"></MyButton>
-                <MyButton :type="'close'"></MyButton>
+                <MyButton :type="'close-bg'"></MyButton>
                 <MyButton :type="'arrow'"></MyButton>
                 <MyButton :label="'default'"></MyButton>
                 <MyButton :icon-name="'edit'" :label="'Label'"></MyButton>
@@ -21,8 +21,6 @@
             <MyToggle></MyToggle>
             <MySelect :options="options"></MySelect>
             <MyTabs></MyTabs>
-
-            <MyDialog></MyDialog>
         </q-page-container>
     </q-layout>
 </template>
@@ -34,7 +32,8 @@ import MySearch from '@/components/MySearch.vue';
 import MyToggle from '@/components/MyToggle.vue';
 import MySelect from '@/components/MySelect.vue';
 import MyTabs from '@/components/MyTabs.vue';
-import MyDialog from '@/components/MyDialog.vue';
+
+
 
 
 const options = [

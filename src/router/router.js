@@ -7,6 +7,7 @@ import ExpensesPage from '@/pages/ExpensesPage.vue'
 import ComponentsExample from '@/example/ComponentsExample.vue'
 import CardsExample from '@/example/CardsExample.vue'
 import ItemsExample from '@/example/ItemsExample.vue'
+import DialogsExample from '@/example/DialogsExample.vue'
 
 
 const routes = [
@@ -24,6 +25,11 @@ const routes = [
     path: '/ItemsExample',
     name: 'ItemsExample',
     component: ItemsExample
+  },
+  {
+    path: '/DialogsExample',
+    name: 'DialogsExample',
+    component: DialogsExample
   },
   {
     path: '/login',
