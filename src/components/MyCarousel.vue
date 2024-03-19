@@ -3,7 +3,7 @@
       arrows
       animated
       v-model="slide"
-      height="400px"
+      height="200px"
     >
       <q-carousel-slide name="first" img-src="https://cdn.quasar.dev/img/mountains.jpg">
         <div class="absolute-bottom custom-caption">

@@ -1,14 +1,18 @@
 <template>
-    <q-layout>
+    <q-layout view="lHh lpr lFf">
         <MyHeader :title="'Расходы'"></MyHeader>
         <q-page-container class="q-mx-sm">
             <MySearch class="q-my-md"></MySearch>
-            <q-list class="list">
-                <MyItem></MyItem>
-                <MyItem></MyItem>
-                <MyItem></MyItem>
-            </q-list>
-            <MyButton class="q-my-lg q-mx-sm" :type="'create'" :label="'Создать'" @btn-click="btnCreate"></MyButton>
+            <q-scroll-area style="height: 550px;">
+                <q-list class="list">
+                    <MyItem></MyItem>
+                    <MyItem></MyItem>
+                    <MyItem></MyItem>
+                </q-list>
+            </q-scroll-area>
+            <q-page-sticky position="bottom-left" :offset="[10, 0]">
+                <MyButton class="q-my-lg q-mx-sm" :type="'create'" :label="'Создать'" @btn-click="btnCreate"></MyButton>
+            </q-page-sticky>
         </q-page-container>
         <MyFooter></MyFooter>
     </q-layout>

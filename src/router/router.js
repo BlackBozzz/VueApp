@@ -8,7 +8,9 @@ import ComponentsExample from '@/example/ComponentsExample.vue'
 import CardsExample from '@/example/CardsExample.vue'
 import ItemsExample from '@/example/ItemsExample.vue'
 import DialogsExample from '@/example/DialogsExample.vue'
-
+import TripPage from '@/pages/TripPage.vue'
+import EditTripPage from '@/pages/EditTripPage.vue'
+import TransactionPage from '@/pages/TransactionPage.vue'
 
 const routes = [
   {
@@ -55,6 +57,21 @@ const routes = [
     path: '/user',
     name: 'user',
     component: UserPage
+  }, 
+  {
+    path: '/trip',
+    name: 'trip',
+    component: TripPage
+  }, 
+  {
+    path: '/edit-trip',
+    name: 'edit-trip',
+    component: EditTripPage
+  },
+  {
+    path: '/transaction',
+    name: 'transaction',
+    component: TransactionPage
   }, 
   
 ]

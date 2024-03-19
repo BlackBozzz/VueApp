@@ -1,5 +1,5 @@
 <template>
-  <q-layout>
+  <q-layout view="lHh lpr lFf">
     <MyHeader :title="'Главная'"></MyHeader>
     <q-page-container class="q-mx-sm">
       <div class="text-h5 text-bold text-deep-purple-10 q-ma-md">Курс валют</div>

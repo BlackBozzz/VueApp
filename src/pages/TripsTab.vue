@@ -1,12 +1,16 @@
 <template>
     <q-tab-panel>
         <MySearch class="q-my-sm"></MySearch>
-        <div class="list">
-            <MyCard></MyCard>
-            <MyCard></MyCard>
-            <MyCard></MyCard>
-        </div>
-        <MyButton class="q-my-lg q-mx-sm" :type="'create'" :label="'Создать'" @btn-click="btnCreate"></MyButton>
+        <q-scroll-area style="height: 550px;">
+            <div class="list">
+                <MyCard></MyCard>
+                <MyCard></MyCard>
+                <MyCard></MyCard>
+            </div>
+        </q-scroll-area>
+        <q-page-sticky position="bottom-left" :offset="[10, 0]">
+            <MyButton class="q-my-lg q-mx-sm" :type="'create'" :label="'Создать'" @btn-click="btnCreate"></MyButton>
+        </q-page-sticky>
     </q-tab-panel>
 </template>
 

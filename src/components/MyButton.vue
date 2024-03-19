@@ -23,6 +23,14 @@
         icon="edit"
         @click="btnClick"
     />
+    <q-btn v-else-if="type=='plus'"
+        style="border-radius: 16px;"
+        unelevated
+        color="deep-purple-1"
+        text-color="deep-purple-10"
+        icon="add"
+        @click="btnClick"
+    />
     <q-btn v-else-if="type=='arrow'"
         color="grey-10"
         round

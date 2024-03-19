@@ -1,5 +1,5 @@
 <template>
-    <q-layout>
+    <q-layout view="lHh lpr lFf">
         <MyHeader :title="'Профиль'"></MyHeader>
         <q-page-container>
             <MyTabs @change-tab="tabUpdate"></MyTabs>
