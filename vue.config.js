@@ -3,6 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: [
     'quasar'
   ],
+  publicPath: '/VueApp/',
 
   pluginOptions: {
     quasar: {
