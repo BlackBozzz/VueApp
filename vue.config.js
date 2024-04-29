@@ -3,7 +3,9 @@ module.exports = defineConfig({
   transpileDependencies: [
     'quasar'
   ],
-  publicPath: '/VueApp/',
+  publicPath: process.env.NODE_ENV === 'production'
+      ? '/vueapp/'
+      : '/',
 
   pluginOptions: {
     quasar: {
