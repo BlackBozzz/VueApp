@@ -72,7 +72,12 @@ const routes = [
     path: '/transaction',
     name: 'transaction',
     component: TransactionPage
-  }, 
+  },
+  {
+    path: '',
+    name: 'home',
+    component: LoginPage
+  }
   
 ]
 
