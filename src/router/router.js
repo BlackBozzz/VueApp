@@ -78,7 +78,6 @@ const routes = [
     name: 'home',
     component: LoginPage
   }
-  
 ]
 
 const router = createRouter({
